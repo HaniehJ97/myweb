@@ -19,8 +19,31 @@ header {
     line-height: 1.6;
 }
 
+/* Adjust logo size */
 header img {
-    width: 50px;
+    width: 100px; /* Set the width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the logo */
+}
+
+/* Align search label and input in the same line */
+header form {
+    display: flex; /* Use flexbox to place label and input on the same line */
+    align-items: center; /* Vertically align the input with the label */
+    justify-content: flex-start; /* Align both elements to the left */
+}
+
+header form label {
+    margin-right: 10px; /* Add some space between the label and input */
+    color: white; /* Keep label text white to match the header */
+}
+
+header form input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px; /* Adjust the width as needed */
 }
 
 nav ul {
@@ -65,8 +88,16 @@ p {
 }
 
 .image-gallery img {
-    max-width: 50%; /* Ensure the image scales with the container */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 80%; /* Increase the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+.image-gallery p {
+    text-align: justify; /* Justifies the text */
+    margin: 20px auto;
+    width: 80%; /* Adjust width of the text to match the image size */
+    line-height: 1.6; /* Improve readability */
 }
 
 figure {
@@ -77,6 +108,75 @@ figure {
 figure img {
     width: 80%;
     border-radius: 5px;
+}
+/* Testimonials section */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 40px 0;
+}
+
+/* Each testimonial bubble */
+.testimonial {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial.reverse {
+    flex-direction: row-reverse; /* Flips layout for alternating styles */
+}
+
+/* Bubble styling */
+.speech-bubble {
+    position: relative;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    padding: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    width: 70%;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px; /* Adjust for normal */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f0f8ff transparent transparent; /* Triangle shape for the bubble */
+}
+
+.testimonial.reverse .speech-bubble::after {
+    left: auto;
+    right: -20px; /* Adjust for reverse */
+    border-color: transparent transparent transparent #f0f8ff;
+}
+
+/* User image */
+figcaption {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.testimonial.reverse figcaption {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.user-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 footer {
@@ -97,7 +197,13 @@ footer ul li {
 }
 
 footer ul li img {
-    width: 20px;
+    width: 40px; /* Increase the width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.footer-logo {
+    width: 80px; /* Adjust size for the logo */
+    margin-top: 10px; /* Adds some space above the logo */
 }
 
 /* Table styling for Amsterdam page */
@@ -119,6 +225,120 @@ th, td {
 th {
     background-color: #0d253f;
     color: white;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Contact Form */
+form fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0d253f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 200px;
+    display: block; /* Makes the button a block element */
+    margin: 0 auto; /* Centers the button horizontally */
+}
+
+/* Thank You Message Section */
+.thank-you-section {
+    background-color: #0d253f;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+.thank-you-section figure {
+    margin-bottom: 20px;
+}
+
+.thank-you-section img {
+    width: 100px;
+}
+
+.thank-you-section figcaption {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.thank-you-section a {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.thank-you-section a:hover {
+    background-color: #ddd;
 }
 
 /* Responsive Design */
@@ -148,13 +368,14 @@ th {
     }
 
     p {
-        width: 90%; /* Adjust the text width */
+        width: 80%; /* Adjust the text width */
     }
 
     table {
-        width: 90%; /* Make the table width flexible */
+        width: 80%; /* Make the table width flexible */
     }
 }
+
 
 /* For mobile screens */
 @media (max-width: 768px) {

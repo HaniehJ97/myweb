@@ -1,0 +1,219 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #0d253f;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    line-height: 1.6;
+}
+
+header img {
+    width: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between; /* Space out images */
+    align-items: flex-start; /* Align them to the top */
+    flex-wrap: wrap; /* Ensure they wrap if the screen is too small */
+}
+
+.image-gallery figure {
+    flex-basis: 30%; /* Each image takes 30% of the width */
+    text-align: center; /* Center the captions */
+    margin-bottom: 20px;
+}
+
+.image-gallery img {
+    max-width: 50%; /* Ensure the image scales with the container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+figure {
+    text-align: center;
+    margin: 20px;
+}
+
+figure img {
+    width: 80%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #0d253f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li img {
+    width: 20px;
+}
+
+/* Table styling for Amsterdam page */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0d253f;
+    color: white;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    header img {
+        width: 40px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery figure {
+        flex-basis: 100%; /* Each image takes full width */
+        margin-bottom: 30px;
+    }
+
+    .image-gallery img {
+        max-width: 80%; /* Ensure the image scales with the container */
+    }
+
+    p {
+        width: 90%; /* Adjust the text width */
+    }
+
+    table {
+        width: 90%; /* Make the table width flexible */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    header img {
+        width: 30px;
+    }
+
+    .search-form {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .image-gallery figure {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    p {
+        width: 100%;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+    header img {
+        width: 25px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .image-gallery img {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    footer ul li img {
+        width: 15px;
+    }
+
+    p {
+        padding: 10px;
+    }
+}

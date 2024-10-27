@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Contact Library Finder">
@@ -9,13 +10,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Library Finder - Contact Us</title>
 </head>
+
 <body>
     <header>
         <img src="images/Logo.png" alt="Library Finder Logo">
         <nav>
             <ul>
                 <li><a href="homepage.html">Home Page</a></li>
-                <li><a href="city.html">Choose Your City</a></li>
+                <span class="dropdown">
+                    <button class="dropbtn">Choose your library</button>
+                    <ul class="dropdown-content">
+                        <li><a href="zandaam.html">Library Of Zandaam</a></li>
+                        <li><a href="amsterdam.html">Library of Amsterdam</a></li>
+                        <li><a href="leiden.html">Library of Leiden</a></li>
+                        <li><a href="rotterdam.html">Library of Rotterdam</a></li>
+                    </ul>
+                </span>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -23,35 +33,36 @@
     <form action="thank-you.html" method="post">
         <fieldset>
             <legend>Contact Information</legend>
-    
+
             <label for="full-name">Full Name *</label>
             <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
-    
+
             <label for="email">Email Address *</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
+
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-    
+
             <label for="request">Write your request *</label>
             <textarea id="request" name="request" placeholder="Write your message here" required></textarea>
-    
+
             <label>
                 <input type="checkbox" name="newsletter"> Join to the newsletter
             </label>
-    
+
             <input type="submit" value="Send">
         </fieldset>
     </form>
-    
+
     <footer>
         <ul>
-            <li><a href="#"><img src="images/Linkedin-Logo.png" alt="LinkedIn"></a></li>
-            <li><a href="#"><img src="images/Instagram-Logo.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="images/Youtube-logo.png" alt="YouTube"></a></li>
+            <li><a href="https://www.linkedin.com/"><img src="images/Linkedin-Logo.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="images/Instagram-Logo.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/"><img src="images/Youtube-logo.png" alt="YouTube"></a></li>
         </ul>
         <p>&copy; 2024 Created by Hanieh Jafari. All rights reserved.</p>
-    </footer>
     <img src="images/Logo.png" alt="Library Finder Logo" class="footer-logo">
+</footer>
 </body>
+
 </html>

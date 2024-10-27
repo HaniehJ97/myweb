@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Your Name">
@@ -9,13 +10,22 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Library of Amsterdam</title>
 </head>
+
 <body>
     <header>
         <img src="images/Logo.png" alt="Library Finder Logo">
         <nav>
             <ul>
                 <li><a href="homepage.html">Home Page</a></li>
-                <li><a href="city.html">Choose Your City</a></li>
+                <span class="dropdown">
+                    <button class="dropbtn">Choose your library</button>
+                    <ul class="dropdown-content">
+                        <li><a href="zandaam.html">Library Of Zandaam</a></li>
+                        <li><a href="amsterdam.html">Library of Amsterdam</a></li>
+                        <li><a href="leiden.html">Library of Leiden</a></li>
+                        <li><a href="rotterdam.html">Library of Rotterdam</a></li>
+                    </ul>
+                </span>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -24,10 +34,14 @@
     <h1>Library of Amsterdam</h1>
     <p> Study rooms: Equipped with state-of-the-art technology and flexible seating for group or individual study.<br>
         Wi-Fi: High-speed internet available throughout the library, ideal for research or remote work.<br>
-        Location: Centrally located in Amsterdam, making it easily accessible for students from universities and residents alike.<br>
-        Public transportation: Well connected via bus and tram lines, making it convenient to reach from various parts of the city.<br>
-        Bicycle parking: Spacious racks available right outside for easy bike access, a key mode of transportation in the city.<br>
-        Cafeteria: Offers a variety of snacks, coffee, and refreshments, providing a comfortable spot for study breaks.<br></p>
+        Location: Centrally located in Amsterdam, making it easily accessible for students from universities and
+        residents alike.<br>
+        Public transportation: Well connected via bus and tram lines, making it convenient to reach from various parts
+        of the city.<br>
+        Bicycle parking: Spacious racks available right outside for easy bike access, a key mode of transportation in
+        the city.<br>
+        Cafeteria: Offers a variety of snacks, coffee, and refreshments, providing a comfortable spot for study
+        breaks.<br></p>
 
     <figure>
         <img src="images/amsterdam.jpeg" alt="Library of Amsterdam">
@@ -35,7 +49,14 @@
     </figure>
 
     <h2>Description</h2>
-    <p>The library in Amsterdam is a modern architectural masterpiece, designed with the younger generation in mind. Its sleek exterior is dominated by large glass windows, allowing for plenty of natural light. The atmosphere inside is warm and inviting, especially on rainy days, with raindrops gently running down the glass. The surrounding area includes green spaces and bike racks, a common sight in Amsterdam, where students can park their bicycles before entering the library. Inside, the layout is open and spacious, with rows of bookshelves filled with both modern and classic literature. There are cozy reading areas and modern study rooms perfect for individuals and groups. This library acts as a peaceful sanctuary for both students and professionals seeking a quiet space for work or leisure reading.</p>
+    <p>The library in Amsterdam is a modern architectural masterpiece, designed with the younger generation in mind. Its
+        sleek exterior is dominated by large glass windows, allowing for plenty of natural light. The atmosphere inside
+        is warm and inviting, especially on rainy days, with raindrops gently running down the glass. The surrounding
+        area includes green spaces and bike racks, a common sight in Amsterdam, where students can park their bicycles
+        before entering the library. Inside, the layout is open and spacious, with rows of bookshelves filled with both
+        modern and classic literature. There are cozy reading areas and modern study rooms perfect for individuals and
+        groups. This library acts as a peaceful sanctuary for both students and professionals seeking a quiet space for
+        work or leisure reading.</p>
 
     <!-- Table of Library Names and Years Built -->
     <h2>Library Construction History</h2>
@@ -43,33 +64,42 @@
         <thead>
             <tr>
                 <th>Library Name</th>
-                <th>Year Built</th>
+                <th>build in</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Library 1</td>
+                <td>Library of zandaam</td>
                 <td>1990</td>
             </tr>
             <tr>
-                <td>Library 2</td>
+                <td>Library of amsterdaam</td>
                 <td>1991</td>
             </tr>
             <tr>
-                <td>Library 3</td>
+                <td>Library of leiden</td>
+                <td>1992</td>
+            </tr>
+            <tr>
+                <td>Library of Lisse</td>
                 <td>1993</td>
+            </tr>
+            <tr>
+                <td>Library of sassenhaim</td>
+                <td>1994</td>
             </tr>
         </tbody>
     </table>
 
     <footer>
         <ul>
-            <li><a href="#"><img src="images/Linkedin-Logo.png" alt="LinkedIn"></a></li>
-            <li><a href="#"><img src="images/Instagram-Logo.png" alt="Instagram"></a></li>
-            <li><a href="#"><img src="images/Youtube-logo.png" alt="YouTube"></a></li>
+            <li><a href="https://www.linkedin.com/"><img src="images/Linkedin-Logo.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="images/Instagram-Logo.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/"><img src="images/Youtube-logo.png" alt="YouTube"></a></li>
         </ul>
         <img src="images/Logo.png" alt="Library Finder Logo" class="footer-logo">
         <p>&copy; 2024 Created by Hanieh Jafari. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

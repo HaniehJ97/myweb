@@ -139,6 +139,40 @@ p {
     word-spacing: 0.01em
 }
 
+section.cookies-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0d253f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+    display: block;  /* Always show */
+}
+
+section.cookies-popup button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+section.cookies-popup button:hover {
+    background-color: #f39c12;
+}
+
+
+.overarchingArticle{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+}
 .content {
     margin: 0 auto;
     width: 1280px
@@ -439,14 +473,13 @@ form input[type="submit"] {
 
 /* Responsive Design */
 
-/* For tablets and smaller screens */
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
     .content {
         width: 980px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (width > 768px) {
     .content {
         width: 980px;
     }
@@ -481,11 +514,7 @@ form input[type="submit"] {
         display: block;
         margin: 0 auto;
     }
-
-    p {
-        width: 80%;
-    }
-
+    
     table {
         width: 80%;
     }
@@ -493,7 +522,7 @@ form input[type="submit"] {
 
 
 /* For mobile screens */
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .content {
         width: 680px;
     }

@@ -1,43 +1,43 @@
 
 
 body {
+    margin: 0 auto;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    color: #333;
-    
 }
 
 header {
-    
-    position : sticky;
     background-color: #0d253f;
     padding: 1rem;
     text-align: center;
     color: white;
     line-height: 1.6;
-    letter-spacing: 0.05em
+    letter-spacing: 0.05em;
+    z-index: 1000; 
 }
-
 
 header form {
     display: flex;
+    flex-wrap: wrap; 
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    
+    justify-content: center; 
+    gap: 10px; 
 }
 
 header form label {
     align-self: baseline;
     margin-right: 10px;
     color: white;
+    text-align: left; 
 }
 
 header form input[type="text"] {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
 }
 
 nav ul {
@@ -112,7 +112,6 @@ button:hover {
     background-color: rgba(221, 221, 221, 0.9);
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
     opacity: 50;
@@ -178,28 +177,44 @@ section.cookies-popup button:hover {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    justify-content: center; 
+    align-items: start; 
 }
 
 .image-gallery figure {
     margin: 0;
+    text-align: center;
 }
 
 .image-gallery img {
-    width: 100%;
+    width: 100%; 
+    max-width: 500px; 
     height: auto;
-    border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.image-gallery .image-description {
+    text-align: justify;
+    margin-top: -10px; 
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .image-gallery p {
-    text-align: justify;
-    margin: 20px auto;
-    width: 80%;
-    line-height: 1.6;
+    text-align: justify; 
+    margin-top: 10px;
+    line-height: 1.6; 
+    font-size: 1.2rem;
+    max-width: 500px; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.image-gallery article {
+    text-align: center; 
 }
 
 
@@ -258,7 +273,7 @@ figure img {
 }
 
 
-/* Specific style for the second testimonial with image on the left */
+
 .speech-bubble.left {
     flex-direction: row;
     /* Puts image on the left */
@@ -363,7 +378,6 @@ th {
 }
 
 
-/* Contact Section */
 .contact-section {
     max-width: 900px;
     margin: 0 auto;
@@ -433,7 +447,7 @@ form input[type="submit"] {
     margin: 0 auto;
 }
 
-/* Thank You Message Section */
+/* thank you page */
 .thank-you-section {
     background-color: #0d253f;
     color: white;
@@ -472,13 +486,10 @@ form input[type="submit"] {
 
 /* Responsive Design */
 
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    .content {
-        width: 980px;
-    }
-}
+/* For Tablets (769px to 1280px) */
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+    
 
-@media (width > 768px) {
     .content {
         width: 980px;
     }
@@ -510,28 +521,35 @@ form input[type="submit"] {
         max-width: 100%;
         height: auto;
         border-radius: 5px;
-        display: block;
-        margin: 0 auto;
     }
-    
+
     table {
         width: 80%;
     }
+    .speech-bubble{
+        max-width: 900px;
+    }
 }
 
-
-/* For mobile screens */
-@media (width <= 768px) {
+/* For Mobile Screens (up to 768px) */
+@media only screen and (max-width: 768px) {
+    
     .content {
         width: 680px;
     }
 
     header {
+        
         padding: 0.5rem;
     }
 
     header img {
         width: 30px;
+    }
+
+    header form {
+        flex-direction: column; 
+        gap: 10px;
     }
 
     .search-form {
@@ -541,11 +559,10 @@ form input[type="submit"] {
     }
 
     .image-gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .image-gallery figure {
-        flex-basis: 100%;
         margin-bottom: 20px;
     }
 
@@ -566,19 +583,31 @@ form input[type="submit"] {
         width: 100%;
     }
 
-    .speech-bubble {
-        max-width: 100%;
+    .testimonials{
+        width: 680px;
+    }
+    .speech-bubble{
+        max-width: 450px;
     }
 }
 
-/* For very small mobile screens */
-@media (max-width: 480px) {
+/* For Small Mobile Screens (up to 480px) */
+@media only screen and (max-width: 480px) {
+
+
     .content {
+        max-width: 400px;
+    }
+    .header {
         max-width: 400px;
     }
 
     header img {
         width: 25px;
+    }
+
+    header form input[type="text"] {
+        width: 90%; 
     }
 
     nav ul li {
@@ -596,4 +625,11 @@ form input[type="submit"] {
     p {
         padding: 10px;
     }
+
+    .speech-bubble.left,
+    .speech-bubble.right {
+        max-width: 200px;
+    }
+  
+    
 }

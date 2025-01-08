@@ -589,6 +589,11 @@ form input[type="submit"] {
     .speech-bubble{
         max-width: 450px;
     }
+
+    figure{
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    }
 }
 
 /* For Small Mobile Screens (up to 480px) */
@@ -628,7 +633,7 @@ form input[type="submit"] {
 
     .speech-bubble.left,
     .speech-bubble.right {
-        max-width: 200px;
+        flex-direction: column;
     }
   
     

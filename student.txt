@@ -1,0 +1,5 @@
+Student name: Hanieh Jafari
+Student number: 732370
+Student class: IT1D
+GitHub Repository: https://github.com/HaniehJ97/myweb
+GitHub Pages URL:  https://haniehj97.github.io/myweb/

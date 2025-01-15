@@ -2,7 +2,7 @@
 
 body {
     margin: 0 auto;
-    font-family: Arial, sans-serif;
+    font-family:  'Roboto', 'Arial', 'sans-serif';
     background-color: #f5f5f5;
 }
 
@@ -60,7 +60,6 @@ nav ul li a {
     font-size: 1rem; 
 }
 
-
 /* dropdown */
 .dropdown {
     position: relative;
@@ -70,7 +69,7 @@ nav ul li a {
 button {
     padding: 10px 20px;
     margin: 0 5px;
-    font-size: 16px;
+    font-size: 1em;
     height: 40px;
     background-color: #f3ad21;
     color: #DDDDDD;
@@ -125,6 +124,7 @@ a:visited {
 h1,
 h2 {
     text-align: center;
+    text-transform: capitalize;
     margin: 20px 0;
 }
 
@@ -158,13 +158,12 @@ section.cookies-popup button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 section.cookies-popup button:hover {
     background-color: #f39c12;
 }
-
 
 .overarchingArticle{
     display: flex;
@@ -276,8 +275,6 @@ figure img {
     background-color: #f3ad21;
 }
 
-
-
 .speech-bubble.left {
     flex-direction: row;
     /* Puts image on the left */
@@ -292,14 +289,11 @@ figure img {
     object-fit: cover;
 }
 
-
 .testimonial.reverse .speech-bubble::after {
     left: auto;
     right: -20px;
     border-color: transparent transparent transparent #3572a8;
 }
-
-
 
 figcaption {
     margin-top: 10px;
@@ -316,7 +310,6 @@ figcaption img {
     margin-top: 10px;
 }
 
-
 .testimonial.reverse figcaption {
     margin-left: 0;
     margin-right: 20px;
@@ -328,7 +321,6 @@ figcaption img {
     border-radius: 50%;
     object-fit: cover;
 }
-
 
 footer {
     background-color: #0d253f;
@@ -380,7 +372,6 @@ th {
     background-color: #0d253f;
     color: white;
 }
-
 
 .contact-section {
     max-width: 900px;
@@ -497,8 +488,6 @@ form input[type="submit"] {
 
 /* For Tablets (769px to 1280px) */
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
-    
-
     .content {
         width: 980px;
     }
@@ -607,9 +596,7 @@ form input[type="submit"] {
 
 /* For Small Mobile Screens (up to 480px) */
 @media only screen and (max-width: 480px) {
-
-
-    .content {
+     .content {
         max-width: 400px;
     }
     .header {
